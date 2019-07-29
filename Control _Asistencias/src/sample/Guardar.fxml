@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#guarda" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GuardarController">
+   <children>
+      <ImageView fitHeight="108.0" fitWidth="600.0">
+         <image>
+            <Image url="@img1.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="p" layoutX="29.0" layoutY="192.0" mnemonicParsing="false" text="Presente">
+         <toggleGroup>
+            <ToggleGroup fx:id="Estado" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="a" layoutX="124.0" layoutY="192.0" mnemonicParsing="false" text="Ausente" toggleGroup="$Estado" />
+      <TextField fx:id="Alumno" layoutX="82.0" layoutY="126.0" />
+      <Label layoutX="29.0" layoutY="130.0" text="Alumno" />
+      <Button layoutX="14.0" layoutY="317.0" mnemonicParsing="false" onAction="#guarda" onMouseClicked="#guarda" text="Guardar" />
+      <Button layoutX="502.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#atras" prefHeight="25.0" prefWidth="59.0" text="Atras" />
+   </children>
+</AnchorPane>
