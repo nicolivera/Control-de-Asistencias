@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.interfazAdministrador">
+   <children>
+      <SplitPane dividerPositions="0.38578680203045684" layoutX="-3.0" layoutY="80.0" prefHeight="320.0" prefWidth="987.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="205.0">
+               <children>
+                  <GridPane layoutX="8.0" layoutY="5.0" prefHeight="194.0" prefWidth="246.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="77.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="123.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nombre" />
+                        <Label text="Apellido" GridPane.rowIndex="1" />
+                        <Label text="Usuario" GridPane.rowIndex="2" />
+                        <Label text="Contraseña" GridPane.rowIndex="3" />
+                        <Label text="Tipo Usuario" GridPane.rowIndex="4" />
+                        <Label text="Carrera" GridPane.rowIndex="5" />
+                        <Label text="Comisión" GridPane.rowIndex="6" />
+                        <TextField fx:id="nombre" prefHeight="25.0" prefWidth="147.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="apellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="usuario" prefHeight="25.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="carrera" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="comision" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="contraseña" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="tipousuario" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <HBox layoutX="2.0" layoutY="267.0" prefHeight="63.0" prefWidth="377.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#Guardar" prefHeight="25.0" prefWidth="72.0" text="Guardar" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Actualizar" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Editar">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Borrar" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="642.0">
+               <children>
+                  <TableView fx:id="tablero" layoutX="14.0" layoutY="14.0" prefHeight="295.0" prefWidth="490.0">
+                    <columns>
+                      <TableColumn fx:id="ColNombre" prefWidth="70.0" text="Nombre" />
+                      <TableColumn fx:id="ColApellido" prefWidth="70.0" text="Apellido" />
+                        <TableColumn fx:id="ColUsuario" prefWidth="70.0" text="Usuario" />
+                        <TableColumn fx:id="ColContraseña" prefWidth="70.0" text="Contraseña" />
+                        <TableColumn fx:id="ColTipo" prefWidth="70.0" text="Tipo" />
+                        <TableColumn fx:id="ColCarrera" prefWidth="70.0" text="Carrera" />
+                        <TableColumn fx:id="ColComision" prefWidth="70.0" text="Comisión" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ImageView fitHeight="80.0" fitWidth="987.0">
+         <image>
+            <Image url="@../img1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
